@@ -34,6 +34,8 @@ group :test do
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
+  # 3.0.0から以下のgemがないとrequire errorになる為追加
+  gem 'rexml'
 end
 
 group :production do
