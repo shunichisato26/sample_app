@@ -4,7 +4,7 @@
 /* mixin, variables, erc. */
 $gray-medium-light: #eaeaea;
 
-@mixin box-sizing {
+@mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
@@ -104,13 +104,14 @@ footer {
   }  
 }
 
-/* miscellanaeous */
-.debug_dunp {
+/* miscellaneous */
+
+.debug_dump {
   clear: both;
   float: left;
   width: 100%;
   margin-top: 45px;
-  @include box-sizing();
+  @include box_sizing;
 }
 
 /* sidebar */
