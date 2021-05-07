@@ -3,7 +3,9 @@ User.create!(name:  "Example User",
   email: "example@railstutorial.org",
   password:              "foobar",
   password_confirmation: "foobar",
-  admin: true)
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now)
   
   # 追加のユーザーをまとめて生成する
   99.times do |n|
@@ -13,7 +15,9 @@ User.create!(name:  "Example User",
     User.create!(name:  name,
       email: email,
       password:              password,
-      password_confirmation: password)
+      password_confirmation: password,
+      activated: true,
+      activated_at: Time.zone.now)
     end
 
 # createの!は冪等性がある前提で書いているこのcreateの段階でfalseという結果が返ってきた場合、処理を中止する→中止しないと下の99人のfakeユーザーを作成する処理が失敗することがわかっているのに実行され、長い待ち時間が発生してしまう。
