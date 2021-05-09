@@ -70,7 +70,7 @@ Rails.application.configure do
   # Add of chapter11
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  host = 'https://fathomless-brushlands-72662.herokuapp.com'
+  host = 'fathomless-brushlands-72662.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
