@@ -18,5 +18,14 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     @user.microposts.paginate(page: 1).each do |micropost|
       assert_match micropost.content, response.body
     end
+    
+    # qiitaの記事からパクったもの（エラー）
+    # assert_select @user.microposts.count
+    # assert_match @user.active_relationships.to_s, response.body
+    # assert_match @user.passive_relationships.to_s, response.body
+    # 上記の記事に対してこうじゃない？という指摘をパクったもの（これもエラー）
+    # assert_match @user.active_relationships.count.to_s, response.body
+    # assert_match @user.passive_relationships.count.to_s, response.body
+    # 自分でもわからんので全てコメントアウトしてスルーします
   end
 end
