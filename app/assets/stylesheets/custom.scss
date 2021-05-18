@@ -158,7 +158,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-light;
+    border-left: 1px solid $gray-lighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -186,7 +186,7 @@ aside {
 }
 
 .users.follow {
-  padding: 0%;
+  padding: 0;
 }
 
 /* forms */
